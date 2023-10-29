@@ -5,8 +5,8 @@ Major dotfiles used by me on a wide range of apps
 - [x] Neovim
 - [ ] TMux
 - [ ] Firefox
-- [ ] XFCE de
-- [ ] zsh
+- [ ] XFCE DE
+- [ ] ZSH
 
 ## ToDo
 - [ ] Create a script to autofetch new commits to host machine
