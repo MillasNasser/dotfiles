@@ -1,5 +1,5 @@
 # dotfiles
-Major dotfiles used by me on a wide range of apps
+Major dotfiles used by me on a wide range of Linux/Unix apps
 
 **Used apps**
 - [x] Neovim
