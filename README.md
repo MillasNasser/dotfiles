@@ -9,6 +9,6 @@ Major dotfiles used by me on a wide range of apps
 - [ ] ZSH
 
 ## ToDo
-- [ ] Create a script to autofetch new commits to host machine
+- [x] Create a script to autofetch new commits to host machine
 - [ ] Create a script to create all symbolic links to a linux system
 - [ ] Create a documentation about every tool used
