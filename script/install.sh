@@ -22,7 +22,8 @@ function install() {
     echo "[INFO] Installing into $target"
 
     # Installing into file in target.txt
-    echo source $DIR/update.sh >> $HOME/$target
+    echo "export DOTFILES=$DIR" >> $HOME/$target
+    echo "(nohup $DIR/update.sh > /dev/null 2>&1 &)" >> $HOME/$target
 }
 
 # Main structure
