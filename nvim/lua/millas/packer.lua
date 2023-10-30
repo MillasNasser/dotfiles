@@ -40,5 +40,21 @@ return require('packer').startup(function(use)
     use 'nvim-treesitter/playground'
 
     -- use "Djancyp/better-comments.nvim"
+
     use "pocco81/auto-save.nvim"
+
+    use "andres-lowrie/vim-sqlx"
+
+    use 'f-person/git-blame.nvim'
+
+    use 'terrortylor/nvim-comment'
+
+    use({
+        "kdheepak/lazygit.nvim",
+        -- optional for floating window border decoration
+        requires = {
+            "nvim-lua/plenary.nvim",
+        },
+    })
+
 end)

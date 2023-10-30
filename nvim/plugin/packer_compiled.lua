@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/millas/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?.lua;/home/millas/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?/init.lua;/home/millas/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?.lua;/home/millas/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/millas/.cache/nvim/packer_hererocks/2.1.1696795921/lib/lua/5.1/?.so"
+local package_path_str = "/home/millas/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?.lua;/home/millas/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?/init.lua;/home/millas/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?.lua;/home/millas/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/millas/.cache/nvim/packer_hererocks/2.1.1692716794/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -79,15 +79,30 @@ _G.packer_plugins = {
     path = "/home/millas/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  autosave = {
+  ["auto-save.nvim"] = {
     loaded = true,
-    path = "/home/millas/.local/share/nvim/site/pack/packer/start/autosave",
+    path = "/home/millas/.local/share/nvim/site/pack/packer/start/auto-save.nvim",
     url = "https://github.com/pocco81/auto-save.nvim"
+  },
+  ["better-comments.nvim"] = {
+    loaded = true,
+    path = "/home/millas/.local/share/nvim/site/pack/packer/start/better-comments.nvim",
+    url = "https://github.com/Djancyp/better-comments.nvim"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/millas/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["git-blame.nvim"] = {
+    loaded = true,
+    path = "/home/millas/.local/share/nvim/site/pack/packer/start/git-blame.nvim",
+    url = "https://github.com/f-person/git-blame.nvim"
+  },
+  ["lazygit.nvim"] = {
+    loaded = true,
+    path = "/home/millas/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -113,6 +128,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/millas/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-comment"] = {
+    loaded = true,
+    path = "/home/millas/.local/share/nvim/site/pack/packer/start/nvim-comment",
+    url = "https://github.com/terrortylor/nvim-comment"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -148,6 +168,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/millas/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  ["vim-sqlx"] = {
+    loaded = true,
+    path = "/home/millas/.local/share/nvim/site/pack/packer/start/vim-sqlx",
+    url = "https://github.com/andres-lowrie/vim-sqlx"
   }
 }
 
