@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "/home/millas/.local/share/nvim/site/pack/packer/start/auto-save.nvim",
     url = "https://github.com/pocco81/auto-save.nvim"
   },
-  ["better-comments.nvim"] = {
-    loaded = true,
-    path = "/home/millas/.local/share/nvim/site/pack/packer/start/better-comments.nvim",
-    url = "https://github.com/Djancyp/better-comments.nvim"
-  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/millas/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -163,6 +158,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/millas/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/home/millas/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
   },
   undotree = {
     loaded = true,

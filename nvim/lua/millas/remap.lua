@@ -34,8 +34,8 @@ vim.keymap.set({"n", "v", "x"}, "<M-K>", "<C-w>2+")
 vim.keymap.set({"n", "v", "x"}, "<M-L>", "<C-w>2>")
 
 -- Creating new window and changing to them
-vim.keymap.set({"n", "v"}, "<C-w>s", "<C-w>s<C-w>w")
-vim.keymap.set({"n", "v"}, "<C-w>v", "<C-w>v<C-w>w")
+vim.keymap.set({"n", "v"}, "<leader>s", "<C-w>s<C-w>w")
+vim.keymap.set({"n", "v"}, "<leader>v", "<C-w>v<C-w>w")
 
 -- Removing commands
 

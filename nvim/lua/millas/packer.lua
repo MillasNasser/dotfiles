@@ -57,4 +57,8 @@ return require('packer').startup(function(use)
         },
     })
 
+    use ({
+        "folke/todo-comments.nvim",
+        requires = { 'nvim-lua/plenary.nvim' }
+    })
 end)
