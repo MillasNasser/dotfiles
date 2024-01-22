@@ -6,6 +6,8 @@ vim.keymap.set({"n", "v"}, "<leader>q", function () vim.cmd[[bd!]] end, {silent=
 -- vim.keymap.set("n", "J", ":let p=getpos('.')<bar>join<bar>call setpos('.', p)<cr>")
 vim.keymap.set({"n", "v"}, "<C-M-f>", ":let @+=expand('%:t:r')<CR>", {silent=true}) -- Capturing filename without extension
 vim.keymap.set({"n", "v"}, "<C-M-e>", ":let @+=expand('%:t')<CR>", {silent=true}) -- Capturing filename with extension
+vim.keymap.set({"n", "v"}, "<leader>hl", ":nohl<CR>", {silent=true}) -- Setting nohlsearch
+vim.keymap.set({"n", "v"}, "<leader>tn", ":tabnew<CR>", {silent=true}) -- Setting nohlsearch
 
 -- Move lines up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

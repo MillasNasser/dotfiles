@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/home/millas/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["telescope-changed-files"] = {
+    loaded = true,
+    path = "/home/millas/.local/share/nvim/site/pack/packer/start/telescope-changed-files",
+    url = "https://github.com/axkirillov/telescope-changed-files"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/millas/.local/share/nvim/site/pack/packer/start/telescope.nvim",
