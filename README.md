@@ -3,7 +3,7 @@ Major dotfiles used by me on a wide range of Linux/Unix apps
 
 **Used apps**
 - [x] Neovim
-- [ ] TMux
+- [x] TMux
 - [ ] Firefox
 - [ ] XFCE DE
 - [ ] ZSH
