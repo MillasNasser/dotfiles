@@ -1,6 +1,6 @@
 -- System
 vim.opt.updatetime = 50
-vim.opt.clipboard = 'unnamedplus'
+-- vim.opt.clipboard = 'unnamedplus'
 
 -- Line numbers
 vim.opt.nu = true
@@ -14,10 +14,7 @@ vim.opt.expandtab = true
 
 -- Indentation and wrap mode
 vim.opt.smartindent = true
-vim.opt.wrap = true
-vim.opt.linebreak = true
-vim.opt.breakindent = true
-vim.opt.breakindentopt={'list:-1'}
+-- vim.opt.wrap = false
 vim.opt.scrolloff = 8
 vim.opt.colorcolumn = "80"
 
@@ -32,10 +29,14 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 -- Highlight
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
 vim.opt.cursorline = true
 
 -- Colors
 vim.opt.termguicolors = true
 
+
+-- Personalized commands
+vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
