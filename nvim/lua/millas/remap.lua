@@ -2,6 +2,7 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex) -- Open explorer
 vim.keymap.set("n", "<leader>a", "ggVG") -- Select all
 vim.keymap.set("x", "<leader>p", "\"_dP") -- Paste without change buffer
 vim.keymap.set("n", "<C-n>", ":enew<CR>") -- Create a new file and replace current buffer
+vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], {silent=true})
 vim.keymap.set({"n", "v"}, "<leader>q", function () vim.cmd[[bd!]] end, {silent=true})
 -- vim.keymap.set("n", "J", ":let p=getpos('.')<bar>join<bar>call setpos('.', p)<cr>")
 vim.keymap.set({"n", "v"}, "<C-M-f>", ":let @+=expand('%:t:r')<CR>", {silent=true}) -- Capturing filename without extension
