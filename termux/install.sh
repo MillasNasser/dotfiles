@@ -7,7 +7,7 @@ pkg install nodejs -y
 pkg install which -y
 pkg install neovim -y
 mkdir projetos
-git clone git@github.com:MillasNasser/dotfiles.git
+git clone https://github.com/MillasNasser/dotfiles.git
 mv dotfiles/ projetos/dotfiles
 ln -s ~/projetos/dotfiles/nvim ~/.config/nvim
 curl -o /data/data/com.termux/files/usr/bin/install-in-mason  https://raw.githubusercontent.com/Amirulmuuminin/setup-mason-for-termux/main/install-in-mason
