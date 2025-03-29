@@ -7,11 +7,13 @@ pkg install nodejs -y
 pkg install which -y
 pkg install neovim -y
 mkdir projetos
-git clone https://github.com/MillasNasser/dotfiles.git
+git clone git@github.com:MillasNasser/dotfiles.git
 mv dotfiles/ projetos/dotfiles
 ln -s ~/projetos/dotfiles/nvim ~/.config/nvim
 curl -o /data/data/com.termux/files/usr/bin/install-in-mason  https://raw.githubusercontent.com/Amirulmuuminin/setup-mason-for-termux/main/install-in-mason
 chmod +x /data/data/com.termux/files/usr/bin/install-in-mason
 install-in-mason lua-language-server
 sh <(curl -sS https://raw.githubusercontent.com/blackc8/termux-composer/master/install)
-# ssh-keygen -t ed25519 -C "millas5444@gmail.com"
+git config --global user.name "Millas Nasser"
+git config --global user.email "millas5444@gmail.com"
+ssh-keygen -t ed25519 -C "millas5444@gmail.com"
