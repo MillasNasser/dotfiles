@@ -1,0 +1,16 @@
+return {
+    {
+        "mason-org/mason-lspconfig.nvim",
+        -- enabled = false,
+        opts = {
+            ensure_installed = {
+                "lua_ls",
+                "phpactor",
+            },
+        },
+        dependencies = {
+            { "mason-org/mason.nvim", opts = {} },
+            "neovim/nvim-lspconfig",
+        },
+    }
+}
