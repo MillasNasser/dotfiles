@@ -1,6 +1,5 @@
 -- System
 vim.opt.updatetime = 50
--- vim.opt.clipboard = 'unnamedplus'
 
 -- Line numbers
 vim.opt.nu = true
@@ -14,12 +13,10 @@ vim.opt.expandtab = true
 
 -- Indentation and wrap mode
 vim.opt.smartindent = true
--- vim.opt.wrap = false
 vim.opt.scrolloff = 8
 vim.opt.colorcolumn = "80"
 
 -- Cursor
-vim.opt.guicursor = ""
 vim.g.mapleader = " "
 
 -- Undotree
@@ -36,7 +33,6 @@ vim.opt.cursorline = true
 -- Colors
 vim.opt.termguicolors = true
 
-
 -- Personalized commands
 vim.opt.foldmethod = "expr"
--- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldlevelstart = 10
