@@ -35,4 +35,5 @@ vim.opt.termguicolors = true
 
 -- Personalized commands
 vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = 'v:lua.vim.lsp.foldexpr()'
 vim.opt.foldlevelstart = 10
