@@ -5,7 +5,7 @@ return {
         lazy = false,
         build = ":TSUpdate",
         config = function ()
-            require("nvim-treesitter").setup({
+            require("nvim-treesitter.configs").setup {
                 ensure_installed = {
                     "c",
                     "lua",
@@ -16,9 +16,6 @@ return {
                     "markdown_inline"
                 },
                 auto_install = true,
-            })
-
-            require("nvim-treesitter.configs").setup {
                 incremental_selection = {
                     enable = true,
                     keymaps = {
