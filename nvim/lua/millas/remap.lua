@@ -1,5 +1,4 @@
-vim.keymap.set("n", "<leader>a", "ggVG") -- Select all
-vim.keymap.set("x", "<leader>p", "\"_dP") -- Paste without change buffer
+vim.keymap.set("n", "<c-a>", "ggVG", { noremap = false, silent = true }) -- Select all
 vim.keymap.set("n", "<C-n>", ":enew<CR>") -- Create a new file and replace current buffer
 vim.keymap.set('t', '<leader><esc>', [[<C-\><C-n>]], {silent=true})
 vim.keymap.set({"n", "v"}, "<leader>q", function () vim.cmd[[bd!]] end, {silent=true})
@@ -27,13 +26,16 @@ vim.keymap.set({"n", "v", "x"}, "<M-J>", "<C-w>2-")
 vim.keymap.set({"n", "v", "x"}, "<M-K>", "<C-w>2+")
 vim.keymap.set({"n", "v", "x"}, "<M-L>", "<C-w>2>")
 
--- Creating new window and changing to them
-vim.keymap.set({"n", "v"}, "<leader>s", "<C-w>s<C-w>w")
-vim.keymap.set({"n", "v"}, "<leader>v", "<C-w>v<C-w>w")
+-- Creating new window
+vim.keymap.set({"n", "v"}, "<leader>s", "<C-w>s")
+vim.keymap.set({"n", "v"}, "<leader>v", "<C-w>v")
+
+-- better indenting
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
+
+-- paste over currently selected text without yanking it
+vim.keymap.set("v", "p", '"_dp')
+vim.keymap.set("v", "P", '"_dP')
 
 -- Removing commands
-
--- Personalized Commands
-vim.api.nvim_create_user_command("Build", function ()
-    os.execute('bear -- make')
-end, {})
