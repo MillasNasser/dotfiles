@@ -1,7 +1,8 @@
 vim.keymap.set("n", "<c-a>", "ggVG", { noremap = false, silent = true }) -- Select all
 vim.keymap.set("n", "<C-n>", ":enew<CR>") -- Create a new file and replace current buffer
 vim.keymap.set('t', '<leader><esc>', [[<C-\><C-n>]], {silent=true})
-vim.keymap.set({"n", "v"}, "<leader>q", function () vim.cmd[[bd!]] end, {silent=true})
+vim.keymap.set({"n", "v"}, "<leader>q", "<cmd>q<cr>", {silent=true})
+vim.keymap.set({"n", "v"}, "<leader>k", function () vim.cmd[[bd!]] end, {silent=true})
 vim.keymap.set({"n", "v"}, "<C-M-f>", ":let @+=expand('%:t:r')<CR>", {silent=true}) -- Capturing filename without extension
 vim.keymap.set({"n", "v"}, "<leader>hl", ":nohl<CR>", {silent=true}) -- Setting nohlsearch
 vim.keymap.set({"n", "v"}, "<leader>tn", ":tabnew<CR>", {silent=true}) -- Setting nohlsearch
