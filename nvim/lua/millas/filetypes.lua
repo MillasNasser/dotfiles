@@ -1,5 +1,6 @@
 vim.filetype.add({
-    pattern = {
-        ['*.h'] = 'c',
+    extension = {
+        h = 'c',
+        sqlx = "sql",
     }
 })
