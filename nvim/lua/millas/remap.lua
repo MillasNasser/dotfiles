@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<c-a>", "ggVG", { noremap = false, silent = true }) -- Select all
+vim.keymap.set("n", "<leader>a", "ggVG", { noremap = false, silent = true }) -- Select all
 vim.keymap.set("n", "<C-n>", ":enew<CR>") -- Create a new file and replace current buffer
 vim.keymap.set('t', '<leader><esc>', [[<C-\><C-n>]], {silent=true})
 vim.keymap.set({"n", "v"}, "<leader>q", "<cmd>q<cr>", {silent=true})
