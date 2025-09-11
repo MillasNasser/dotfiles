@@ -34,6 +34,7 @@ return {
         config = function ()
             local cmp = require("cmp")
             local luasnip = require("luasnip")
+            local types = require("cmp.types")
 
             -- If you want insert `(` after select function or method item
             local cmp_autopairs = require('nvim-autopairs.completion.cmp')
@@ -43,11 +44,26 @@ return {
             )
 
             cmp.setup({
+                sources = cmp.config.sources({
+                    { name = 'nvim_lsp' },
+                    { name = 'luasnip' }, -- For luasnip users.
+                    { name = 'lazydev' },
+                    { name = 'buffer' },
+                    { name = 'path' },
+                }),
                 snippet = {
                     -- REQUIRED - you must specify a snippet engine
                     expand = function(args)
                         require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
                     end,
+                },
+                completion = {
+                    autocomplete = {
+                        types.cmp.TriggerEvent.TextChanged,
+                    },
+                    completeopt = 'menu,menuone,noselect',
+                    keyword_pattern = [[\%(-\?\d\+\%(\.\d\+\)\?\|\h\w*\%(-\w*\)*\)]],
+                    keyword_length = 1,
                 },
                 window = {
                     -- completion = cmp.config.window.bordered(),
@@ -71,7 +87,7 @@ return {
                             fallback()
                         end
                     end),
-                    ["<C-n>"] = cmp.mapping(function(fallback)
+                    ["<Tab>"] = cmp.mapping(function(fallback)
                         if cmp.visible() then
                             cmp.select_next_item()
                         elseif luasnip.locally_jumpable(1) then
@@ -80,7 +96,7 @@ return {
                             fallback()
                         end
                     end, { "i", "s" }),
-                    ["<C-p>"] = cmp.mapping(function(fallback)
+                    ["<S-Tab>"] = cmp.mapping(function(fallback)
                         if cmp.visible() then
                             cmp.select_prev_item()
                         elseif luasnip.locally_jumpable(-1) then
@@ -89,13 +105,6 @@ return {
                             fallback()
                         end
                     end, { "i", "s" }),
-                }),
-                sources = cmp.config.sources({
-                    { name = 'nvim_lsp' },
-                    { name = 'luasnip' }, -- For luasnip users.
-                    { name = 'lazydev' },
-                    { name = 'buffer' },
-                    { name = 'path' },
                 }),
             })
 
