@@ -9,7 +9,7 @@ return {
         },
         lazy = false, -- neo-tree will lazily load itself
         keys = {
-            { "<leader>e", "<Cmd>Neotree<CR>", desc = "LazyGit" }
+            { "<leader>e", "<Cmd>Neotree<CR>", desc = "NeoTree: folder explorer" }
         },
         opts = {
             close_if_last_window = true,

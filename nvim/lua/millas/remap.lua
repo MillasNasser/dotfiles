@@ -1,11 +1,12 @@
-vim.keymap.set("n", "<leader>a", "ggVG", { noremap = false, silent = true }) -- Select all
-vim.keymap.set("n", "<C-n>", ":enew<CR>") -- Create a new file and replace current buffer
-vim.keymap.set('t', '<leader><esc>', [[<C-\><C-n>]], {silent=true})
-vim.keymap.set({"n", "v"}, "<leader>q", "<cmd>q<cr>", {silent=true})
-vim.keymap.set({"n", "v"}, "<leader>k", function () vim.cmd[[bd!]] end, {silent=true})
-vim.keymap.set({"n", "v"}, "<C-M-f>", ":let @+=expand('%:t:r')<CR>", {silent=true}) -- Capturing filename without extension
-vim.keymap.set({"n", "v"}, "<leader>hl", ":nohl<CR>", {silent=true}) -- Setting nohlsearch
-vim.keymap.set({"n", "v"}, "<leader>tn", ":tabnew<CR>", {silent=true}) -- Setting nohlsearch
+vim.keymap.set("n", "<leader>a", "ggVG", {noremap = false, silent = true , desc="Select all"})
+vim.keymap.set("n", "<C-n>", ":enew<CR>", {silent=true, desc="Create a new file and replace current buffer"})
+vim.keymap.set('t', '<leader><esc>', [[<C-\><C-n>]], {silent=true, desc="Normal Mode in terminal"})
+vim.keymap.set({"n", "v"}, "<leader>q", "<cmd>q<cr>", {silent=true, desc="Close buffer"})
+vim.keymap.set({"n", "v"}, "<leader>k", function () vim.cmd[[bd!]] end, {silent=true, desc="Close and delete buffer"})
+vim.keymap.set({"n", "v"}, "<C-M-f>", ":let @+=expand('%:t:r')<CR>", {silent=false, desc="Capturing filename without extension"})
+vim.keymap.set({"n", "v"}, "<leader>hl", ":nohl<CR>", {silent=true, desc="Setting nohlsearch"})
+vim.keymap.set({"n", "v"}, "<leader>tn", ":tabnew<CR>", {silent=true, desc="Setting nohlsearch"})
+vim.keymap.set({"n", "v"}, "<leader>oo", ":!open %<CR>", {silent=true, desc="Open file in xdgopen"})
 
 -- Move lines up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
