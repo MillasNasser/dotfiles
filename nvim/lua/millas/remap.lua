@@ -6,7 +6,13 @@ vim.keymap.set({"n", "v"}, "<leader>k", function () vim.cmd[[bd!]] end, {silent=
 vim.keymap.set({"n", "v"}, "<C-M-f>", ":let @+=expand('%:t:r')<CR>", {silent=false, desc="Capturing filename without extension"})
 vim.keymap.set({"n", "v"}, "<leader>hl", ":nohl<CR>", {silent=true, desc="Setting nohlsearch"})
 vim.keymap.set({"n", "v"}, "<leader>tn", ":tabnew<CR>", {silent=true, desc="Setting nohlsearch"})
-vim.keymap.set({"n", "v"}, "<leader>oo", ":!open %<CR>", {silent=true, desc="Open file in xdgopen"})
+vim.keymap.set({"n", "v"}, "<leader>em", function ()
+  local messages = vim.fn.execute('messages')
+  local buf = vim.api.nvim_create_buf(false, true) -- scratch buffer
+  vim.api.nvim_buf_set_lines(buf, 0, -1, false, vim.split(messages, '\n'))
+  vim.api.nvim_win_set_buf(0, buf)
+end, {silent=true, desc="Open NVIM error messages as a buffer"})
+-- vim.keymap.set({"n", "v"}, "<leader>oo", ":!open %<CR>", {silent=true, desc="Open file in xdgopen"})
 
 -- Move lines up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
