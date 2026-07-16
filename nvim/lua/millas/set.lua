@@ -1,5 +1,6 @@
 -- System
 vim.opt.updatetime = 50
+vim.opt.ttyfast = true
 
 -- Line numbers
 vim.opt.nu = true
